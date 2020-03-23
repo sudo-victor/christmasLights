@@ -1,0 +1,141 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #333;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+:root {
+    --time-first: 1000ms;
+    --time-second: 2000ms;
+}
+
+ul {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-top: 2px solid darkslategrey;
+}
+
+ul li {
+    width: 20px;
+    height: auto;
+    margin: 20px;
+    margin-top: 0;
+
+    transform: rotate(90deg);
+    background: #f9f9f9;
+    border-radius: 50%;
+    list-style-position: inside;
+}
+
+.first {
+    background-color: rgba(48, 134, 105, 0.3);
+}
+
+.second {
+    background: rgba(0, 255, 255, 0.3);
+}
+
+.third {
+    background-color: rgba(247, 0, 148, 0.3);
+}
+
+.on .first-effect {
+    animation: first var(--time-first) infinite 0s linear;
+}
+
+.on .second-effect {
+    animation: second var(--time-second) infinite 0s linear;
+}
+
+.on .third-effect {
+    animation: third var(--time-second) infinite 0s linear;
+}
+
+@keyframes first {
+    0% {
+    }
+    50% {
+        background-color: rgba(255, 247, 165, 1);
+        box-shadow: 3px 0px 10px 5px rgba(0, 247, 165, 0.3);
+    }
+    100% {
+    }
+}
+
+@keyframes second {
+    0% {
+    }
+    50% {
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 3px 0px 10px 5px rgba(0, 255, 255, 0.3);
+    }
+    100% {
+    }
+}
+
+@keyframes third {
+    0% {
+    }
+    50% {
+        background-color: rgba(255, 0, 148, 1);
+        box-shadow: 3px 0px 5px 5px rgba(247, 0, 148, 0.3);
+    }
+    100% {
+    }
+}
+
+.control {
+    width: 100px;
+    height: 150px;
+    margin-top: 300px;
+
+    background-color: darkslategrey;
+    border-radius: 30%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sensor {
+    width: 10px;
+    height: 5px;
+    position: relative;
+    top: -5px;
+
+    background: tomato;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+section {
+    width: 50%;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+i {
+    margin-top: 10px;
+    padding: 5px;
+
+    border-radius: 50%;
+    background: rgba(3, 3, 3, 0.3);
+    color: #fff;
+}
